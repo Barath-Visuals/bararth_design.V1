@@ -22,7 +22,7 @@ export default function Footer () {
             <div className={style.Header_wrappers}>
                 <div className={style.Header_wrapper} ref={svgRef}>
                     <span className={style.Header_wrapperContainer}>
-                        copyrights @ 2025 barathdesign.inc | All rights reserverd
+                        copyrights @ 2025 barathdesign.inc | All rights reserverd.
                     </span>
                 </div>
             </div>
