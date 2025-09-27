@@ -1,0 +1,25 @@
+.Header_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 30px 0;
+  backdrop-filter: blur(10px);
+  
+  .Header_wrappers {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+
+        .Header_wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .Header_wrapperContainer {
+                font-size: clamp(12px, 2.5vw, 14px);
+            }
+        }
+    }
+}

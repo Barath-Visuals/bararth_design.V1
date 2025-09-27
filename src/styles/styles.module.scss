@@ -1,0 +1,425 @@
+/* ============================= */
+/* 🔹 GLOBAL RESET + FONT */
+/* ============================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "MyFont";
+}
+
+/* ============================= */
+/* 🔹 HEADER */
+/* ============================= */
+.Header_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 30px 0;
+  backdrop-filter: blur(10px);
+
+  .Header_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-y: hidden;
+
+    .Header_wrapperContainer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+/* ============================= */
+/* 🔹 PROFILE */
+/* ============================= */
+.profile_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 350px;
+  position: relative;
+
+  .profile_wrapper {
+    position: relative;
+    width: 100%;
+    height: auto;
+
+    img {
+      border-radius: inherit;
+      width: 100%;
+      height: auto;
+      display: block;
+      z-index: 1;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.6) 100%
+      );
+      z-index: 2;
+      border-radius: inherit;
+      transition: opacity 0.4s ease-in-out;
+      pointer-events: none;
+    }
+  }
+}
+
+/* ============================= */
+/* 🔹 PROFILE DESCRIPTION */
+/* ============================= */
+.Description_set {
+  width: 100%;
+  max-width: 350px;
+  overflow: hidden;
+
+  .sets,
+  .setes {
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 10px;
+  }
+
+  .heroName {
+    font-size: clamp(24px, 5vw, 32px);
+    font-weight: 700;
+    white-space: nowrap;
+  }
+
+  .heroRole {
+    font-size: clamp(16px, 4vw, 20px);
+    margin-bottom: 10px;
+    white-space: nowrap;
+  }
+
+  .des {
+    line-height: 1.5;
+    font-size: clamp(12px, 2.5vw, 14px);
+    text-align: left;
+  }
+}
+
+/* ============================= */
+/* 🔹 SKILLS */
+/* ============================= */
+.skillContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 350px;
+  gap: 10px;
+
+  .skillWrapper {
+    width: 100%;
+    text-align: left;
+    overflow: hidden;
+
+    .skillHeading {
+      .head {
+        font-size: clamp(24px, 4vw, 32px);
+        font-weight: 700;
+        color: #fff;
+        text-align: left;
+      }
+    }
+  }
+
+  .skilldesWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+
+    .skillDes {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 18px;
+      background-color: #000;
+      color: #fff;
+      border-radius: 25px;
+      font-weight: 500;
+      font-size: clamp(12px, 2vw, 16px);
+      cursor: default;
+      user-select: none;
+      text-align: center;
+    }
+  }
+}
+
+/* ============================= */
+/* 🔹 LEFT CONTENT WRAPPERS */
+/* ============================= */
+.leftWrapper,
+.leftWrappers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+
+  .LeftContent {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 20px;
+    width: 100%;
+    background-color: #0f0f0f;
+  }
+
+  .LeftContents {
+    display: flex;
+    flex-direction: column;
+    border-radius: 30px;
+    background-color: #0f0f0f;
+    border: 0.5px solid #2a2a2a;
+  }
+}
+
+/* ============================= */
+/* 🔹 PROFICIENCY SECTION */
+/* ============================= */
+.Proficiency_container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+
+  .ProficiencyWrapper {
+    text-align: left;
+    width: 100%;
+    overflow: hidden;
+
+    .ProficiencyHeading {
+      width: 100%;
+      .Proficiencyhead {
+        font-size: clamp(24px, 3.5vw, 32px);
+        font-weight: 700;
+        color: #fff;
+        text-align: left;
+      }
+    }
+  }
+}
+
+.skillsList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  max-width: 100%;
+}
+
+.skillBar {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.skillInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: clamp(12px, 2vw, 14px);
+  font-weight: 600;
+  color: #ddd;
+}
+
+.blockBar {
+  display: flex;
+  gap: 4px;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.block {
+  width: 2px;
+  height: 15px;
+  border-radius: 2px;
+  background: #2a2a2a;
+
+  &.filled {
+    background: #000;
+  }
+}
+
+/* 📱 Tablet */
+@media (max-width: 1024px) {
+  .Proficiency_container {
+    gap: 8px;
+  }
+
+  .skillsList {
+    gap: 14px;
+  }
+
+  .blockBar {
+    gap: 3.75px;
+  }
+
+  .block {
+    height: 12px;
+  }
+}
+
+/* 📱 Mobile */
+@media (max-width: 600px) {
+  .Proficiency_container {
+    padding: 10px;
+    gap: 6px;
+  }
+
+  .Proficiencyhead {
+    font-size: clamp(18px, 5vw, 24px);
+  }
+
+  .skillsList {
+    gap: 10px;
+  }
+
+  .skillInfo {
+    font-size: 11px;
+  }
+
+  .block {
+    width: 1.5px;
+    height: 9px;
+  }
+}
+
+/* ============================= */
+/* 🔹 IMAGE CAROUSEL */
+/* ============================= */
+.carouselWrapper {
+  width: 350px;
+  background: #111;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  .imageArea {
+    position: relative;
+    overflow: hidden;
+
+    .track {
+      display: flex;
+      height: 350px;
+      width: 100%;
+
+      .slide {
+        flex: 0 0 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  .bottomBar {
+    background: #000;
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .pagination {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #111;
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      margin-bottom: 0.5rem;
+      gap: 0.4rem;
+
+      .dot {
+        width: 6px;
+        height: 6px;
+        background: #666;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: 0.3s;
+
+        &.active {
+          background: #fff;
+          width: 30px;
+          border-radius: 20px;
+        }
+      }
+    }
+
+    .label {
+      color: #fff;
+      font-size: 24px;
+    }
+  }
+}
+
+/* ============================= */
+/* 🔹 RESPONSIVE TWEAKS */
+/* ============================= */
+@media (max-width: 768px) {
+  .leftWrapper {
+    gap: 20px;
+  }
+
+  .LeftContent {
+    padding: 15px;
+  }
+
+  .skilldesWrapper {
+    justify-content: center;
+  }
+
+  .heroName {
+    font-size: 24px;
+  }
+
+  .heroRole {
+    font-size: 16px;
+  }
+
+  .des {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .leftWrappers {
+    max-width: 335px;
+
+    .LeftContent {
+      width: 100%;
+      padding: 12px;
+    }
+  }
+
+  .carouselWrapper {
+    width: 100%;
+    border-radius: 20px;
+  }
+
+  .skilldesWrapper {
+    gap: 8px;
+  }
+}
