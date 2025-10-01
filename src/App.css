@@ -4,6 +4,9 @@
   box-sizing: border-box;
   font-family: "MyFont";
 }
+:-webkit-scrollbar {
+  display: none;
+}
 
 @font-face {
   font-family: 'MyFont';
@@ -13,8 +16,14 @@
 /* ============================= */
 /* 🔹 MAIN LAYOUT */
 /* ============================= */
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
 .mains {
-  width: 100vw;
+  width: 100%;
   min-height: 100vh;
   background-size: cover;
   background-position: center;
