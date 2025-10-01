@@ -268,7 +268,7 @@
   }
 
   .blockBar {
-    gap: 3.75px;
+    gap: 3.50px;
   }
 
   .block {
@@ -422,5 +422,26 @@
 
   .skilldesWrapper {
     gap: 8px;
+  }
+
+  .blockBar{
+    gap: 3.75px;
+  }
+}
+
+/* ============================= */
+/* 💻 LAPTOP RESPONSIVE FIX */
+/* ============================= */
+@media (max-width: 1366px) {
+  .leftWrapper,
+  .leftWrappers {
+    align-items: center;
+    justify-content: center;
+
+    .LeftContent,
+    .LeftContents {
+      max-width: 350px;
+      width: 100%;
+    }
   }
 }

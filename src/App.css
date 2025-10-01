@@ -1,4 +1,4 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -10,6 +10,9 @@
   src: url('/src/fonts/BricolageGrotesque_24pt-Regular.ttf') format('truetype');
 }
 
+/* ============================= */
+/* 🔹 MAIN LAYOUT */
+/* ============================= */
 .mains {
   width: 100vw;
   min-height: 100vh;
@@ -18,32 +21,52 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow-x: hidden;
+}
 
+.sub_mains {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px;
+  width: 100%;
+  max-width: 1800px; /* 💡 Limit max content width for consistency */
+  flex-wrap: wrap; /* allow wrapping if smaller */
+}
+
+/* 💻 Laptop & Larger Screens (Keep desktop layout consistent) */
+@media (max-width: 1600px) {
   .sub_mains {
-    padding: 20px;
-    display: flex;
-    align-items: flex-start;
+    max-width: 1400px;
+    gap: 18px;
+  }
+}
+
+@media (max-width: 1366px) {
+  .sub_mains {
     justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+}
+
+/* 📱 Tablets - Switch to Grid */
+@media (max-width: 1024px) {
+  .sub_mains {
+    /* display: grid;
+    grid-template-columns: repeat(2, 1fr); */
+    justify-items: center;
     gap: 20px;
-    width: 100%;
-    height: 100%;
   }
 }
 
-
-@media (max-width: 1200px) {
-  .mains 
-  .sub_mains{
-    display: grid;
-    width: fit-content;
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 480px) {
-  .mains 
-  .sub_mains{
+/* 📱 Mobile - Stack Vertically */
+@media (max-width: 600px) {
+  .sub_mains {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    width: 100%;
   }
 }
