@@ -17,7 +17,7 @@
         display: flex;
         flex-direction: column;
         gap: 20px;
-        border-radius: 20px;
+        border-radius: 30px;
         border: 0.5px solid #2a2a2a;
     }
 }
@@ -49,7 +49,7 @@
         gap: 15px;
         overflow-y: auto;
         padding-right: 6px; /* space for scrollbar */
-        border-radius: 20px;
+        border-radius: 30px;
 
         /* 🔹 custom scrollbar */
         &::-webkit-scrollbar {
@@ -58,7 +58,7 @@
 
         .imageItem {
             width: 100%;
-            border-radius: 20px;
+            border-radius: 30px;
             object-fit: cover;
         }
     }
